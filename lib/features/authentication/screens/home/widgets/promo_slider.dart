@@ -23,6 +23,14 @@ class AppPromoSlider extends StatelessWidget {
         CarouselSlider(
           options: CarouselOptions(
             viewportFraction: 0.9,
+            autoPlay: true, // Enables automatic sliding
+            autoPlayInterval: Duration(
+              seconds: 3,
+            ), // Adjust time between slides
+            autoPlayAnimationDuration: Duration(
+              milliseconds: 1000,
+            ), // Smooth transition
+            autoPlayCurve: Curves.easeInOut, // Animation effect
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
           ),
           items: banners.map((url) => AppRoundedImage(imageUrl: url)).toList(),
