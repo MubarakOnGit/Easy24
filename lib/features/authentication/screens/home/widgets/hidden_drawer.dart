@@ -1,0 +1,43 @@
+// import 'package:abu_app/utils/constants/colors.dart';
+// import 'package:flutter/material.dart';
+// import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
+//
+// import 'home.dart';
+//
+// class HiddenDrawer extends StatefulWidget {
+//   const HiddenDrawer({super.key});
+//
+//   @override
+//   State<HiddenDrawer> createState() => _HiddenDrawerState();
+// }
+//
+// class _HiddenDrawerState extends State<HiddenDrawer> {
+//   List<ScreenHiddenDrawer> _pages = [];
+//
+//   @override
+//   void initState() {
+//     super.initState();
+//
+//     _pages = [
+//       ScreenHiddenDrawer(
+//         ItemHiddenMenu(
+//           name: 'Home page',
+//           baseStyle: TextStyle(),
+//           selectedStyle: TextStyle(),
+//         ),
+//         HomeScreen(),
+//       ),
+//     ];
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return HiddenDrawerMenu(
+//       backgroundColorMenu: AppColors.primary,
+//
+//       screens: _pages,
+//
+//       initPositionSelected: 0,
+//     );
+//   }
+// }

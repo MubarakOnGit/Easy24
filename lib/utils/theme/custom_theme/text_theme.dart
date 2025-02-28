@@ -49,7 +49,7 @@ class AppTextTheme {
     bodySmall: const TextStyle().copyWith(
       fontSize: 14.0,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: Colors.grey,
     ),
 
     labelLarge: const TextStyle().copyWith(
@@ -109,7 +109,7 @@ class AppTextTheme {
     bodySmall: const TextStyle().copyWith(
       fontSize: 14.0,
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.grey,
     ),
 
     labelLarge: const TextStyle().copyWith(

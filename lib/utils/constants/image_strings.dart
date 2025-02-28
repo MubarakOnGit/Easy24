@@ -31,4 +31,10 @@ class AppImages {
       "assets/images/signup_verification/email_send.png";
   static const String verifyIllustration =
       "assets/images/signup_verification/email_verify.png";
+
+  //Abu's teashop categories
+  static const String teaIcon = "assets/teaShop_categories/tea.png";
+  static const String coffieIcon = "assets/images/";
+  static const String snacks =
+      "assets/images/signup_verification/email_verify.png";
 }

@@ -5,9 +5,10 @@ import '../../../utils/constants/sizes.dart';
 import '../../../utils/device/device_utility.dart';
 
 class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const AppAppBar({
+  AppAppBar({
     super.key,
     this.title,
+    this.ishome = false,
     this.actions,
     this.leadingIcon,
     this.leadingOnPressed,
@@ -15,32 +16,32 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   final Widget? title;
+  final bool ishome;
   final bool showBackArrow;
   final IconData? leadingIcon;
   final List<Widget>? actions;
-  final VoidCallback? leadingOnPressed;
+  final VoidCallback? leadingOnPressed; // This will be used for the drawer
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
-      child: AppBar(
-        automaticallyImplyLeading: false,
-        leading:
-            showBackArrow
-                ? IconButton(
-                  onPressed: () => Get.back(),
-                  icon: const Icon(Iconsax.arrow_left),
-                )
-                : leadingIcon != null
-                ? IconButton(
-                  onPressed: leadingOnPressed,
-                  icon: Icon(leadingIcon),
-                )
-                : null,
-        title: title,
-        actions: actions,
-      ),
+    return AppBar(
+      automaticallyImplyLeading: false,
+      leading:
+          ishome
+              ? IconButton(
+                icon: const Icon(Icons.menu, color: Colors.white),
+                onPressed: leadingOnPressed, // Opens the drawer
+              )
+              : showBackArrow
+              ? IconButton(
+                onPressed: () => Get.back(),
+                icon: const Icon(Iconsax.arrow_left),
+              )
+              : leadingIcon != null
+              ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon))
+              : null,
+      title: title,
+      actions: actions,
     );
   }
 

@@ -6,11 +6,15 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
 class AppHomeAppBar extends StatelessWidget {
-  const AppHomeAppBar({super.key});
+  bool ishome;
+  VoidCallback? ontap;
+  AppHomeAppBar({super.key, required this.ishome, required this.ontap});
 
   @override
   Widget build(BuildContext context) {
     return AppAppBar(
+      ishome: ishome,
+      leadingOnPressed: ontap,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
