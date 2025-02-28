@@ -37,4 +37,9 @@ class AppImages {
   static const String coffieIcon = "assets/images/";
   static const String snacks =
       "assets/images/signup_verification/email_verify.png";
+
+  // // abu home banner
+  static const String banner1 = "assets/banners/banner1.jpg";
+  static const String banner2 = "assets/banners/banner2.jpg";
+  static const String banner3 = "assets/banners/banner3.jpg";
 }

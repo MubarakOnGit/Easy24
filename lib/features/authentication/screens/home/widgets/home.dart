@@ -1,12 +1,16 @@
+import 'package:abu_app/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:abu_app/features/authentication/screens/home/widgets/promo_slider.dart';
 import 'package:abu_app/utils/constants/colors.dart';
 import 'package:abu_app/utils/constants/image_strings.dart';
 import 'package:abu_app/utils/constants/sizes.dart';
 import 'package:abu_app/utils/device/device_utility.dart';
 import 'package:abu_app/utils/helpers/helper_functions.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import '../../../../../common/widgets/app_rounded_image.dart';
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../../common/widgets/custom_shapes/containers/search_container.dart';
@@ -173,6 +177,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
+                  ],
+                ),
+              ),
+
+              /// body
+              Padding(
+                padding: EdgeInsets.all(AppSizes.defaultSpace),
+                child: AppPromoSlider(
+                  banners: [
+                    AppImages.banner1,
+                    AppImages.banner2,
+                    AppImages.banner3,
                   ],
                 ),
               ),
