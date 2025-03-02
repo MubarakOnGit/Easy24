@@ -15,6 +15,7 @@ import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../../common/widgets/image_text_widget/vertical_image_text.dart';
+import '../../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import 'home_appbar.dart';
 import 'home_categories.dart';
 
@@ -184,11 +185,19 @@ class _HomeScreenState extends State<HomeScreen> {
               /// body
               Padding(
                 padding: EdgeInsets.all(AppSizes.defaultSpace),
-                child: AppPromoSlider(
-                  banners: [
-                    AppImages.banner1,
-                    AppImages.banner2,
-                    AppImages.banner3,
+                child: Column(
+                  children: [
+                    /// promo slider
+                    AppPromoSlider(
+                      banners: [
+                        AppImages.banner1,
+                        AppImages.banner2,
+                        AppImages.banner3,
+                      ],
+                    ),
+
+                    /// popular products
+                    //AppProductCardVertical(),
                   ],
                 ),
               ),

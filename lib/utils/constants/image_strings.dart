@@ -42,4 +42,7 @@ class AppImages {
   static const String banner1 = "assets/banners/banner1.jpg";
   static const String banner2 = "assets/banners/banner2.jpg";
   static const String banner3 = "assets/banners/banner3.jpg";
+
+  static const String processing = "";
+  // static const String processing = "assets/animations/Processing.mp4";
 }
